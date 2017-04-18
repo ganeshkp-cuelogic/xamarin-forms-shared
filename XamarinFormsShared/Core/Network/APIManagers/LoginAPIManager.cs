@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace TestDemo
 {
-	public class LoginAPIManager:BaseAPI, ILoginAPI
+	public class LoginAPIManager : BaseAPI, ILoginAPI
 	{
 		private String loginEndPoint = "/login";
 
@@ -18,8 +18,8 @@ namespace TestDemo
 		}
 
 		public LoginAPIManager()
-		{	
-			
+		{
+
 		}
 
 		public async void doLogin(LoginRequestModel loginRequest, Action<LoginResponse, GPError> callback)
@@ -30,12 +30,15 @@ namespace TestDemo
 
 			APIResult result = await NetworkRequestManager.Sharedmanager.sendPostRequest(strInputJson, completeURL);
 			LoginResponse loginResponse = new LoginResponse();
-			if(result.Error == null) {				
+			if (result.Error == null)
+			{
 				UserInfoModel userInfoModel = JsonConvert.DeserializeObject<UserInfoModel>(result.ResponseJSON);
 				loginResponse.userInfo = userInfoModel;
 				//Save user info
-				AppRepository.sharedRepository.saveUserInfo(userInfoModel);
-			} else {
+				//AppRepository.sharedRepository.saveUserInfo(userInfoModel);
+			}
+			else
+			{
 				//Process the error object
 			}
 			callback(loginResponse, result.Error);
