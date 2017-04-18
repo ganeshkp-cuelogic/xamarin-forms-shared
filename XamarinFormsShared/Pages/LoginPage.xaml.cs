@@ -39,7 +39,7 @@ namespace XamarinFormsShared
 				status = false;
 				DisplayAlert("Alert", "Please enter valid email id", "OK");
 			}
-			else if (entryPassword.Text == null &&  entryPassword.Text.Length == 0)
+			else if (entryPassword.Text == null && entryPassword.Text.Length == 0)
 			{
 				DisplayAlert("Alert", "Please enter password", "OK");
 				status = false;
@@ -60,14 +60,17 @@ namespace XamarinFormsShared
 				loginRequest.email = entryEmail.Text;
 				loginRequest.password = entryPassword.Text;
 				if (NetworkReachabilityManager.isInternetAvailable())
-				{								
-					UserDialogs.Instance.ShowLoading("Loading", MaskType.Gradient);
+				{
+					UserDialogs.Instance.ShowLoading("Loading ...", MaskType.Gradient);
 					LoginAPIManager.SharedManager.doLogin(loginRequest, (LoginResponse loginResponse, GPError error) =>
-					{		
+					{
 						UserDialogs.Instance.HideLoading();
-						if(error != null) {
+						if (error != null)
+						{
 							DisplayAlert("Alert", error.Message, "OK");
-						} else {
+						}
+						else
+						{
 							DisplayAlert("Message", "Login Successfull", "OK");
 						}
 					});
