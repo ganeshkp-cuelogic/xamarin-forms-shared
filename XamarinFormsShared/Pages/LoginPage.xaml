@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsShared.LoginPage">
+	<ContentPage.Content>
+		<ScrollView BackgroundColor="#3498DB">
+			<StackLayout
+				VerticalOptions="CenterAndExpand"
+				HorizontalOptions="FillAndExpand"
+				Orientation="Vertical"
+				Margin="50, 0, 50, 0">
+								
+				<Label
+					Text="Welcome To Xamarin"
+					TextColor="White"
+					FontSize="24"
+					Margin="0, 0, 0, 25"
+					HorizontalOptions="CenterAndExpand"
+					FontAttributes="Bold">					
+				</Label>
+
+				<Entry
+					x:Name="entryEmail"
+					Placeholder="Enter Email Id"
+					HorizontalOptions="FillAndExpand"
+					Margin="0, 0, 0, 15">										
+				</Entry>
+
+				<Entry					
+					x:Name="entryPassword"
+					Placeholder="Enter Password"
+					Margin="0, 0, 0, 20"
+					IsPassword="true"
+					>					
+				</Entry>
+
+				<Button					
+					x:Name="btnLogin"
+					Text="Login"
+					TextColor="White"
+					BorderColor="White"
+					BorderRadius="5"
+					BorderWidth="1"
+					WidthRequest="120"
+					HorizontalOptions="CenterAndExpand"
+					Command="{Binding LoginCommand}">					
+				</Button>
+
+				<Label
+					Text="Or sign in width"
+					TextColor="White"
+					FontSize="18"
+					Margin="0, 10, 0, 15"
+					HorizontalOptions="CenterAndExpand">
+					
+				</Label>
+
+				<StackLayout 
+					Orientation="Horizontal"
+					HorizontalOptions="CenterAndExpand">
+					<Image
+						Source="facebook"
+						Margin="0, 0, 10, 0"
+						Aspect="AspectFit"
+						x:Name="imgFacebook"
+						>
+					</Image>
+					<Image										
+						Source="google"
+						Aspect="AspectFit"
+						x:Name="imgGoogle"
+						>
+					</Image>
+				</StackLayout>
+
+				<Label
+					Text="Not a member yet ? Sign Up"
+					TextColor="White"
+					FontSize="18"
+					Margin="0, 10, 0, 25"
+					HorizontalOptions="CenterAndExpand">					
+				</Label>
+
+			</StackLayout>
+						
+		</ScrollView>
+		
+	</ContentPage.Content>
+</ContentPage>

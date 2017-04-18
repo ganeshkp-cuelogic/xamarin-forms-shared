@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{0D778712-7426-4F3E-A396-C71050FE480A}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>XamarinFormsShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XamarinFormsSharedPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinFormsSharedPage.xaml.cs">
+      <DependentUpon>XamarinFormsSharedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helpers\Command.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helpers\MessagingCenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helpers\MessagingCenterAlert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helpers\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helpers\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IAppRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IBaseAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IBaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IBaseScreenConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IDBManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IDataBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\ILoginAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMessageDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\INetworkReachability.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\INetworkReqeustManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IRestruantsAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Models\BaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Models\RestruantModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Models\SettingsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Models\UserInfoModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\APIManagers\BaseAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\APIManagers\LoginAPIManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\APIManagers\RestruantsAPIManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Communication\NetworkRequestManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Models\APIResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Models\GPError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Models\NetworkRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Models\Request\LoginResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Models\Response\LoginRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Network\Models\Response\RestruantsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Providers\GPRestaurantsProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Repository\AppRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Utils\Messages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Utils\NetworkReachabilityManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Utils\Validators\GPValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\DataBase\DBManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Core\.DS_Store" />
+  </ItemGroup>
+</Project>
