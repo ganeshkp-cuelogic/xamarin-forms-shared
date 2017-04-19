@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Acr.UserDialogs;
+using FFImageLoading.Forms.Droid;
 
 namespace XamarinFormsShared.Droid
 {
@@ -26,6 +27,7 @@ namespace XamarinFormsShared.Droid
 			LoadApplication(new App());
 
 			UserDialogs.Init(() => (Activity)Xamarin.Forms.Forms.Context);
+			CachedImageRenderer.Init();
 		}
 	}
 }

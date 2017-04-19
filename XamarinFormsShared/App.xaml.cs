@@ -17,6 +17,13 @@ namespace XamarinFormsShared
 			MainPage = new LoginPage();
 		}
 
+
+		public void MoveToRestaurantsScreen()
+		{
+			MainPage = new NavigationPage(new RestaurantsPage());
+		}
+
+
 		protected override void OnStart()
 		{
 			// Handle when your app starts
@@ -33,7 +40,8 @@ namespace XamarinFormsShared
 		}
 
 
-		public void showLoading() {
+		public void showLoading()
+		{
 			var containerPage = Application.Current.MainPage;
 
 			var indicator = new ActivityIndicator()
@@ -49,8 +57,9 @@ namespace XamarinFormsShared
 			containerPage.IsBusy = true;
 		}
 
-		public void hideLoading() {
+		public void hideLoading()
+		{
 			mainLayout.IsVisible = false;
 		}
- 	}
+	}
 }

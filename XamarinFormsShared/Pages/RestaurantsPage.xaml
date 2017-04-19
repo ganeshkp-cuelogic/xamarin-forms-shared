@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsShared.RestaurantsPage">
+	
+		<ContentPage.Content>
+	        <ListView  x:Name="listView" RowHeight="100">
+	            <ListView.ItemTemplate>
+	                <DataTemplate>
+	                    <ViewCell>
+	                    
+	                        <StackLayout 
+	                        Orientation="Horizontal" VerticalOptions="CenterAndExpand">							
+								<Image x:Name="imgViewRstaurants"								
+								Aspect="AspectFill"
+								Source="{Binding restaurant.thumb}" 
+								HeightRequest="70"
+								WidthRequest="70"
+								Margin="20,0,0,0"
+								BackgroundColor="Red"
+								>								
+								</Image>
+				 	 		
+	                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Margin="20,0,20,0">	                                
+	                                <Label Text="{Binding restaurant.name}"
+	                                TextColor="#f35e20"
+									FontSize="14" />
+	                                <Label Text="{Binding restaurant.address}"
+	                                FontSize="12"
+	                                HorizontalOptions="EndAndExpand"
+	                                TextColor="#503026" />
+	                            </StackLayout>	                           
+	                        </StackLayout>
+	                        
+	                    </ViewCell>
+	                </DataTemplate>
+	            </ListView.ItemTemplate>
+	        </ListView>
+	    </ContentPage.Content>
+		
+</ContentPage>

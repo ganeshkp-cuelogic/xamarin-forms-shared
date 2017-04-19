@@ -71,7 +71,8 @@ namespace XamarinFormsShared
 						}
 						else
 						{
-							DisplayAlert("Message", "Login Successfull", "OK");
+							//DisplayAlert("Message", "Login Successfull", "OK");
+							moveToRestaurantsScreen();
 						}
 					});
 				}
@@ -80,6 +81,11 @@ namespace XamarinFormsShared
 					DisplayAlert("Alert", "No internet connetion available", "OK");
 				}
 			}
+		}
+
+		private void moveToRestaurantsScreen()
+		{
+			App.Current.MainPage = new NavigationPage(new RestaurantsPage());
 		}
 	}
 }
