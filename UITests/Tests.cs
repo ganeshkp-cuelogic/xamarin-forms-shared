@@ -4,6 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
+using TestDemo;
 
 namespace XamarinFormsShared.UITests
 {
@@ -32,6 +33,21 @@ namespace XamarinFormsShared.UITests
 			app.Screenshot("Welcome screen.");
 
 			Assert.IsTrue(results.Any());
+		}
+
+		[Test]
+		public void TestLoginForm()
+		{
+			//Arrange
+			app.EnterText("EntryEmail", "ganesh.nist@gmail.com.dom");
+			app.EnterText("EntryPassword", "ganesh");
+
+			//Act
+			app.Tap("ButtonLogin");
+
+			//Assert
+			var query = app.Query("EntryEmail").First();
+			
 		}
 	}
 }

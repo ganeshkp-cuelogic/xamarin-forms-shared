@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsShared.Droid", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsShared.UITests", "UITests\XamarinFormsShared.UITests.csproj", "{464240D4-EDD8-4609-96E2-CFDA1BBA8F83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -52,5 +54,17 @@ Global
 		{464240D4-EDD8-4609-96E2-CFDA1BBA8F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{464240D4-EDD8-4609-96E2-CFDA1BBA8F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{464240D4-EDD8-4609-96E2-CFDA1BBA8F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Release|iPhone.ActiveCfg = Release|iPhone
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Release|iPhone.Build.0 = Release|iPhone
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Debug|iPhone.Build.0 = Debug|iPhone
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{1B72147B-C9CF-4D4B-80F0-A1C8BA77CC50}.Release|Any CPU.Build.0 = Release|iPhone
 	EndGlobalSection
 EndGlobal

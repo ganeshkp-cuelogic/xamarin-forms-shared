@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsShared.LoginPage" Title="Restaurants">
 	<ContentPage.Content>	
-		<ScrollView BackgroundColor="#3498DB">
+		<ScrollView BackgroundColor="#3498FF">
 			<StackLayout
 				VerticalOptions="CenterAndExpand"
 				HorizontalOptions="FillAndExpand"
@@ -19,6 +19,7 @@
 
 				<Entry
 					x:Name="entryEmail"
+					AutomationId="EntryEmail"
 					Placeholder="Enter Email Id"
 					HorizontalOptions="FillAndExpand"
 					Margin="0, 0, 0, 15">										
@@ -26,6 +27,7 @@
 
 				<Entry					
 					x:Name="entryPassword"
+					AutomationId="EntryPassword"
 					Placeholder="Enter Password"
 					Margin="0, 0, 0, 20"
 					IsPassword="true"
@@ -34,6 +36,7 @@
 
 				<Button					
 					x:Name="btnLogin"
+					AutomationId="ButtonLogin"
 					Text="Login"
 					TextColor="White"
 					BorderColor="White"
