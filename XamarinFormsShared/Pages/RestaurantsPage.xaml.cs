@@ -20,7 +20,7 @@ namespace XamarinFormsShared
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();
-			fetchRestruants(null);
+			fetchRestruants(Tuple.Create(18.534095, 73.877834));
 		}
 
 		private void fetchRestruants(Tuple<double, double> location)
