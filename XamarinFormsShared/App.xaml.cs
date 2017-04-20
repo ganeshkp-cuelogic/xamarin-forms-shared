@@ -14,9 +14,12 @@ namespace XamarinFormsShared
 
 			DBManager.sharedManager.createTables();
 
-			MainPage = new LoginPage();
+			if(DBManager.sharedManager.getUserInfo() != null) {
+				MoveToRestaurantsScreen();
+			} else {
+				MainPage = new LoginPage();
+			}				
 		}
-
 
 		public void MoveToRestaurantsScreen()
 		{

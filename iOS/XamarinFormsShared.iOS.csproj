@@ -152,12 +152,15 @@
     <ImageAsset Include="Assets.xcassets\google.imageset\google.png" />
     <ImageAsset Include="Assets.xcassets\restr.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\restr.imageset\restruant.png" />
+    <ImageAsset Include="Assets.xcassets\power.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\power.imageset\power.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\facebook.imageset\" />
     <Folder Include="Assets.xcassets\google.imageset\" />
     <Folder Include="Assets.xcassets\restr.imageset\" />
+    <Folder Include="Assets.xcassets\power.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

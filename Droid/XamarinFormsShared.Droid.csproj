@@ -150,6 +150,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\facebook.png" />
     <AndroidResource Include="Resources\drawable\google.png" />
+    <AndroidResource Include="Resources\drawable\power.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="json.net">

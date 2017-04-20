@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Acr.UserDialogs;
 using TestDemo;
+using System.Threading;
 
 namespace XamarinFormsShared
 {
@@ -13,6 +14,7 @@ namespace XamarinFormsShared
 		{
 			Title = "Restaurants";
 			InitializeComponent();
+			showSettings();
 		}
 
 		protected override void OnAppearing()
@@ -37,5 +39,15 @@ namespace XamarinFormsShared
 				}
 			});
 		}
+
+		private void showSettings() {
+			ToolbarItems.Add(new ToolbarItem("Logout", "power.png",() => {
+				UserDialogs.Instance.Toast("You are logged out successfully");
+				DBManager.sharedManager.deleteCurrentSetting();;
+				AppRepository.sharedRepository.deleteUserInfo();
+				App.Current.MainPage = new LoginPage();	
+			}));
+		}
+
 	}
 }

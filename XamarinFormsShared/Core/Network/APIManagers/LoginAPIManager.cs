@@ -34,8 +34,11 @@ namespace TestDemo
 			{
 				UserInfoModel userInfoModel = JsonConvert.DeserializeObject<UserInfoModel>(result.ResponseJSON);
 				loginResponse.userInfo = userInfoModel;
+
 				//Save user info
-				//AppRepository.sharedRepository.saveUserInfo(userInfoModel);
+				if(DBManager.sharedManager.getUserInfo() == null) {
+					AppRepository.sharedRepository.saveUserInfo(userInfoModel);
+				}
 			}
 			else
 			{
