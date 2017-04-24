@@ -5,6 +5,7 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using TestDemo;
+using System.Threading;
 
 namespace XamarinFormsShared.UITests
 {
@@ -38,16 +39,32 @@ namespace XamarinFormsShared.UITests
 		[Test]
 		public void TestLoginForm()
 		{
-			//Arrange
+			app.Screenshot("App Started - Login Screen");
+
 			app.EnterText("EntryEmail", "ganesh.nist@gmail.com.dom");
 			app.EnterText("EntryPassword", "ganesh");
-
-			//Act
 			app.Tap("ButtonLogin");
+			app.DismissKeyboard();
+			app.Screenshot("Login failed due to invalid credentials");
 
-			//Assert
-			var query = app.Query("EntryEmail").First();
-			
+
+			//Using the correcting credentials
+			app.Screenshot("Entering correct credentials");
+			app.Tap("EntryEmail");
+			app.ClearText();
+			app.EnterText("EntryEmail", "ganesh.nist@gmail.com");
+
+			app.Tap("EntryPassword");
+			app.ClearText();
+			app.EnterText("EntryPassword", "adminasdf");
+			app.Tap("ButtonLogin");
+			app.DismissKeyboard();
+		}
+
+		[Test]
+		public void TestLoginScreenUI()
+		{
+
 		}
 	}
 }

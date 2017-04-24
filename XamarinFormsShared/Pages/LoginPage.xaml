@@ -14,6 +14,7 @@
 					FontSize="24"
 					Margin="0, 0, 0, 25"
 					HorizontalOptions="CenterAndExpand"
+					VerticalOptions="CenterAndExpand"
 					FontAttributes="Bold">					
 				</Label>
 

@@ -1,7 +1,6 @@
 ﻿using System;
+using Plugin.Connectivity;
 using Xamarin.Forms;
-using XamarinFormsDemo;
-using Connectivity.Plugin;
 
 namespace TestDemo
 {
@@ -9,9 +8,10 @@ namespace TestDemo
 	{
 		public NetworkReachabilityManager()
 		{
-			
+
 		}
-		public static bool isInternetAvailable() {
+		public static bool isInternetAvailable()
+		{
 			return CrossConnectivity.Current.IsConnected;
 		}
 	}

@@ -22,8 +22,8 @@ namespace XamarinFormsShared
 			btnLogin.Clicked += onClickOfLogin;
 			Debug.WriteLine("---------- OnAppear called!");
 
-			entryEmail.Text = "ganesh.nist@gmail.com";
-			entryPassword.Text = "adminasdf";
+			//entryEmail.Text = "ganesh.nist@gmail.com";
+			//entryPassword.Text = "adminasdf";
 		}
 
 		private bool validateFields()
@@ -39,7 +39,7 @@ namespace XamarinFormsShared
 				status = false;
 				DisplayAlert("Alert", "Please enter valid email id", "OK");
 			}
-			else if (entryPassword.Text == null && entryPassword.Text.Length == 0)
+			else if (String.IsNullOrEmpty(entryPassword.Text))
 			{
 				DisplayAlert("Alert", "Please enter password", "OK");
 				status = false;
